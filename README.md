@@ -1,9 +1,9 @@
 # Marketing-Analytics-Case-Study
 This is the solution of Danny Ma's Marketing Analytics Case Study. Here I have applied my best SQL Skills to solve the Business Problem. I have done whole analysis on MYSQL Workbench.
 ![Screenshot (216)](https://user-images.githubusercontent.com/72690313/132275250-4d54f455-54f2-4c9f-b822-cf8fd40aad30.png)
-######## Entity Relationship Diagram
+########Entity Relationship Diagram
 ![Screenshot (218)](https://user-images.githubusercontent.com/72690313/132275381-dcbc986f-979b-482b-9b32-c4d0072ad2da.png)
-######## Case Study Overview
+########Case Study Overview
 Personalized customer emails based off marketing analytics is a winning formula for 
 many digital companies, and this is exactly the initiative that the leadership team at DVD 
 Rental Co has decided to tackle!
