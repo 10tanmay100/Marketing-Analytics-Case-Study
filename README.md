@@ -215,6 +215,8 @@ o What proportion of each customer’s total films watched does this count
 make?
 ![Screenshot (239)](https://user-images.githubusercontent.com/72690313/132278590-e6c7c515-b20d-45f0-91e2-c86f379e1372.png)
 .. so on
+
+
 5. Identify each customer’s favorite actor and film count, then recommend up to 3 
 more unwatched films starring the same actor.
 **Favourite Actors of Each Customer and count of films of each actors**
