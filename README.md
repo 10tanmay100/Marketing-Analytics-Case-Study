@@ -193,18 +193,27 @@ select dense_rank() over (partition by customer_id,category_id  order by films_c
 select customer_id,category_id,film_id from my_data7
 where drank in(1,2,3);
 ![Screenshot (225)](https://user-images.githubusercontent.com/72690313/132277638-dddebbdc-d2ae-41a5-bd19-eab18ad5ca4c.png)
+
+
 o How many total films have they watched in their top category?
 ![Screenshot (227)](https://user-images.githubusercontent.com/72690313/132277769-7b35d50f-0937-427c-822d-9888ae7524b1.png)
 .. so on
+
+
 creating view for further use of the query
 ![Screenshot (229)](https://user-images.githubusercontent.com/72690313/132277903-e6ed254c-68aa-41bd-a9a0-2195184723d9.png)
 o How many more films has the customer watched compared to the average 
 DVD Rental Co customer?
 ![Screenshot (231)](https://user-images.githubusercontent.com/72690313/132278045-813146ac-ddf2-4991-ac95-424e58229835.png)
 .. so on
+
+
+
 o How does the customer rank in terms of the top X% compared to all other 
 customers in this film category?
 ![Screenshot (233)](https://user-images.githubusercontent.com/72690313/132278154-46d18d6f-ea62-42b8-b17e-4b7056691452.png)
+
+
 o How many total films has the customer watched in this category?
 ![Screenshot (235)](https://user-images.githubusercontent.com/72690313/132278330-070f402c-0589-4d22-96e0-9d63ec97712a.png)
 .. so on
