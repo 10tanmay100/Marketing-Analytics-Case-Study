@@ -226,6 +226,10 @@ creating view for further use
 **recommend up to 3 
 more unwatched films starring the same actor**(Part of Ques-5)
 **Query is too big so I have pasted the query here**
+
+
+
+
 with my_d3 as(with my_d2 as(with my_d1 as(with my_d as(select cust_fav_actor.customer_id as customer_id,film_id,cust_fav_actor.actor_id as actor_id from cust_fav_actor 
 inner join (select customer_id,film_id,actor_id from(select customer_id,rental.inventory_id as inventory_id,inventory.film_id as film_id,actor_id from rental
 inner join inventory on(inventory.inventory_id=rental.inventory_id) inner join film_actor on(film_actor.film_id=inventory.film_id)
