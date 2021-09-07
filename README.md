@@ -142,6 +142,11 @@ Creating view for further use the query
 2.  For each customer recommend up to 3 popular unwatched films for each 
 category
 **The Query was too big so I have pasted here the query**
+
+
+
+
+
 with my_data7 as(
 with my_data6 as(with my_data5 as(with my_data4 as (with my_data3 as(with my_data2 as(with my_data1 as(
 with my_data as(select dense_rank() over 
