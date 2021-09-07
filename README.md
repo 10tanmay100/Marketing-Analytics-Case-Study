@@ -1,9 +1,9 @@
 # Marketing-Analytics-Case-Study
 This is the solution of Danny Ma's Marketing Analytics Case Study. Here I have applied my best SQL Skills to solve the Business Problem. I have done whole analysis on MYSQL Workbench.
 ![Screenshot (216)](https://user-images.githubusercontent.com/72690313/132275250-4d54f455-54f2-4c9f-b822-cf8fd40aad30.png)
-########Entity Relationship Diagram
+## Entity Relationship Diagram
 ![Screenshot (218)](https://user-images.githubusercontent.com/72690313/132275381-dcbc986f-979b-482b-9b32-c4d0072ad2da.png)
-########Case Study Overview
+## Case Study Overview
 Personalized customer emails based off marketing analytics is a winning formula for 
 many digital companies, and this is exactly the initiative that the leadership team at DVD 
 Rental Co has decided to tackle!
@@ -14,15 +14,15 @@ Throughout this marketing case study we will cover many SQL data manipulation an
 analysis techniques. The aim is to further extend your SQL knowledge base and also 
 expose you to some scenarios where you can apply some neat tricks that I’ve picked up 
 over the years!
-######## key Business Requirements
+## key Business Requirements
 The marketing team have shared with us a draft of the email they wish to send to their 
 customers.
-###################### Requirement #1
+## Requirement #1
 **Top 2 Categories**
 For each customer, we need to identify the top 2 categories for each customer based off 
 their past rental history. These top categories will drive marketing creative images as 
 seen in the travel and sci-fi examples in the draft email
-###################### Requirement #2
+## Requirement #2
 **Category Film Recommendations**
 The marketing team has also requested for the 3 most popular films for each customer’s 
 top 2 categories.
@@ -32,7 +32,7 @@ If there are less than 3 films available - marketing is happy to show at least 1
 Any customer which do not have any film recommendations for either category must be 
 flagged out so the marketing team can exclude from the email campaign - this is of high 
 importance
-####################### Requirement #3 & #4
+## Requirement #3 & #4
 **Individual Customer Insights**
 The number of films watched by each customer in their top 2 categories is required as 
 well as some specific insights.
@@ -46,7 +46,7 @@ customers in this film category?
 1. How many total films has the customer watched in this category?
 2. What proportion of each customer’s total films watched does this count make?
 Note the specific rounding of the percentages with 0 decimal places
-####################### Requirement #5
+## Requirement #5
 **Favorite Actor Recommendations**
 Along with the top 2 categories, marketing has also requested top actor film 
 recommendations where up to 3 more films are included in the recommendations list as 
@@ -58,8 +58,8 @@ The same logical business rules apply - in addition any films that have already 
 recommended in the top 2 categories must not be included as actor recommendations.
 If the customer doesn’t have at least 1 film recommendation - they also need to be 
 flagged with a separate actor exclusion flag.
-######## Understanding the data
-####################### **Table #1 - rental**
+## Understanding the data
+## **Table #1 - rental**
 This dataset consists of rental data points at a customer level. There is a unique 
 sequential rental_id for each record in the table which corresponds to an 
 individual customer_id purchasing or renting a specific item with a inventory_id. There 
@@ -70,7 +70,7 @@ inserted into the table.
 In the ERD - we can see that there is a linkage between this rental table with 
 the inventory table via the inventory_id field.
 Click here to inspect raw data
-####################### **Table #2 - inventory**
+## **Table #2 - inventory**
 This inventory dataset consists of the relationship between specific items available for 
 rental at each store - note that there may be multiple inventory items for a specific film at 
 a unique store.
@@ -82,7 +82,7 @@ This inventory table is linked to the previous rental table via the inventory_id
 is an integer datatype.
 The next table we will investigate is how we will link these inventory items to a specific 
 film via the film table and the film_id column.
-####################### **Table #3 - film**
+## **Table #3 - film**
 The third table in our ERD is the film table which helps us identify the title of films 
 rented by DVD Rental Co customers. The film title, description as well as special 
 features and other fields are available for further analysis.
@@ -94,26 +94,26 @@ can practically ignore them for the time being but these more involved data stru
 occur in real life too so it’s just something you need to be aware of.
 We will use the film_id column to help us join onto table #4 film_actor to help us 
 identify which actors appeared in each film.
-####################### **Table #4 - film_category**
+## **Table #4 - film_category**
 The 4th table in the ERD is film_category which shows the relationship 
 between film_id and category_id.
 Multiple films will appear in each relevant category_id which will map one-to-one with 
 our next table in our ERD, the category table.
-####################### **Table #5 - category**
+## **Table #5 - category**
 The 5th table in the ERD is the category table which simply contains a one to one 
 mapping between category_id and the name of each category.
-####################### **Table #6 - film_actor**
+## **Table #6 - film_actor**
 The 6th table in our ERD is film_actor which shows actors who appeared in each film 
 based off related actor_id and film_id values.
 An actor can appear in multiple films and a film can feature multiple actors. This 
 relationship between values is what we usually call a “many-to-many” relationship - this 
 is really important to note especially when we are dealing with joins.
-####################### **Table #7 - actor**
+## **Table #7 - actor**
 The actor table simply shows the first and last name for each actor based off their 
 unique actor_id - we can trace which films a specific actor appears in by joining this 
 table onto the previously discussed film_actor table on the actor_id column.
 
-###################### Business Questions
+## Business Questions
 1. Identify top 2 categories for each customer based off their past rental history
 2. For each customer recommend up to 3 popular unwatched films for each 
 category
@@ -132,7 +132,7 @@ more unwatched films starring the same actor.
 6. What is the second ranking category by total rental count?
 7. What was the top category watched by total rental count?
 
-####################### Solutions
+## Solutions
 1. Identify top 2 categories for each customer based off their past rental history
 ![Screenshot (220)](https://user-images.githubusercontent.com/72690313/132277217-8b7f1b36-4877-40ee-a34d-58086aaaa2e0.png)
 ..so on
